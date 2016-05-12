@@ -1,4 +1,4 @@
-<!--  app/views/todos/index.html.erb -->
+<!--  app/views/reviews/index.html.erb -->
 
 <ul class="nav nav-tabs" role="tablist">
   <li class="active"><%= link_to 'View reviews', reviews_path %></li>
@@ -72,3 +72,16 @@
 <%= link_to new_review_path, class: 'btn btn-default' do %>
   <i class="glyphicon glyphicon-plus"></i> New Review
 <% end %>
+
+<!--<% content_for :top_content do %>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Welcome!</h1>
+      <p>Register to get started.</p>
+      <p>
+        <%= link_to 'Register', new_user_registration_path, class: 'btn btn-default btn-lg' %>
+      </p>
+    </div>
+  </div>
+<% end %>
+-->

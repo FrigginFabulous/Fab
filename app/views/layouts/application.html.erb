@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fab</title>
+  <title>Classic Auto</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+
 </head>
 <body>
   <%= render 'shared/navigation' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> 
     <div id="main-container" class="container">
       <div class="row">
         <div class="col-xs-3">
@@ -19,7 +23,8 @@
           <%= yield %>
         </div>
       </div>
-    </div>
+    </div> 
+    
 
 </body>
 </html>

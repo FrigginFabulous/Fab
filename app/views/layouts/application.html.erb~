@@ -1,25 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fab</title>
+  <title>Classic Auto</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+
 </head>
 <body>
-  <%= render 'shared/navigation' %>
+  <!--<%= render 'shared/navigation' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> 
     <div id="main-container" class="container">
       <div class="row">
         <div class="col-xs-3">
           <h1>Classic Auto</h1>
-          <img src="Logo_1.jpeg" alt="Logo 1" style="width:200px;height:76px;">
-          <%= image_tag("Logo_1.png", :alt => "Logo") %>
+          <!--<img src="Logo_1.jpeg" alt="Logo 1" style="width:200px;height:76px;">
+          <%= image_tag("Logo_1.png", :alt => "Logo") %> 
         </div>
         <div class="col-xs-9">
           <%= yield %>
         </div>
       </div>
+    </div> -->
+    
+    <nav class="navbar navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to 'Fab', root_path, class: 'navbar-brand' %>
     </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Home', root_path %></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        <% if user_signed_in? %>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <%= current_user.email %>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><%= link_to 'Profile', edit_user_registration_path %></li>
+              <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to 'Log In', new_user_session_path %></li>
+          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 </body>
 </html>

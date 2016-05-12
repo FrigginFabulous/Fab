@@ -1,4 +1,4 @@
-<!--  app/views/todos/index.html.erb -->
+<!--  app/views/reviews/index.html.erb -->
 
 <ul class="nav nav-tabs" role="tablist">
   <li class="active"><%= link_to 'View reviews', reviews_path %></li>
@@ -35,7 +35,7 @@
 
 <br>
 
-<!--<%= link_to 'New Review', new_review_path, class: 'btn btn-default' %>-->
+<%= link_to 'New Review', new_review_path, class: 'btn btn-default' %>
 <%= link_to new_review_path, class: 'btn btn-default' do %>
   <i class="glyphicon glyphicon-plus"></i> New Review
 <% end %>
@@ -72,3 +72,5 @@
 <%= link_to new_review_path, class: 'btn btn-default' do %>
   <i class="glyphicon glyphicon-plus"></i> New Review
 <% end %>
+
+
