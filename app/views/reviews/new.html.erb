@@ -1,5 +1,10 @@
 <!--  app/views/reviews/new.html.erb -->
+<style type="text/css">
+   body { background: lightgrey !important; }
 
+</style>
+
+<body>
 <ul class="nav nav-tabs" role="tablist">
   <li><%= link_to 'View reviews', reviews_path %></li>
   <li class="active"><%= link_to 'New review', new_review_path %></li>
@@ -10,3 +15,4 @@
 <%= render 'form' %>
 
 <%= link_to 'Back', reviews_path, class: 'btn btn-default' %>
+</body>

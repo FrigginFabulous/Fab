@@ -1,8 +1,25 @@
 Rails.application.routes.draw do
-  devise_for :users
+  resources :apts
   resources :appointments
+  get 'pages/home' => 'pages/home', as: 'pages_home'
+
+  get 'pages/appointment' => 'pages/appointment', as: 'pages_apt'
+
+  get 'pages/about' => 'pages/about', as: 'pages_about'
+
+  get 'pages/location' => 'pages/location', as: 'pages_location'
+
+  get 'pages/services' => 'pages/services', as: 'pages_services'
+
+  get 'reviews/index' => 'reviews/index', as: 'reviews_index'
+
+  get 'apts' => 'apts', as: 'make_apts'
+
+  devise_for :users
+  resources :appoints
+  get 'appoints' => 'appoints'
   resources :reviews
-  root 'reviews#index'
+  root 'pages#home'
   get "/pages/:page" => "pages#show"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

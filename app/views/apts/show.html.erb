@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @apt.name %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @apt.time %>
+</p>
+
+<%= link_to 'Edit', edit_apt_path(@apt) %> |
+<%= link_to 'Back', apts_path %>

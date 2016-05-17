@@ -8,22 +8,13 @@
 
 
 </head>
-<body>
+<body  bgcolor = "#1C1C1C">
   <%= render 'shared/navigation' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p> 
-    <div id="main-container" class="container">
-      <div class="row">
-        <div class="col-xs-3">
-          <h1>Classic Auto</h1>
-          <!--<img src="Logo_1.jpeg" alt="Logo 1" style="width:200px;height:76px;">
-          <%= image_tag("Logo_1.png", :alt => "Logo") %> -->
-        </div>
-        <div class="col-xs-9">
+    <h1 font size = "5" color = "#FFF"><p class="notice"><%= notice %></p></h1>
+    <h1 font size = "5" color = "#FFF"><p class="alert"><%= alert %></p> </h1>
+          <!-- <h1>Classic Auto</h1> -->
+          <!--<%= image_tag("Logo_1.png", :alt => "Logo", :size => "200x76") %> -->
           <%= yield %>
-        </div>
-      </div>
-    </div> 
     
 
 </body>

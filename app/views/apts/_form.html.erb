@@ -1,0 +1,44 @@
+<%= form_for(@apt) do |f| %>
+  <% if @apt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@apt.errors.count, "error") %> prohibited this apt from being saved:</h2>
+
+      <ul>
+      <% @apt.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= f.label :name, class: 'col-sm-2 control-label' %><br>
+    <div class="col-sm-10">
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+  </div>
+  <!--<div class="field form-group">
+    <%= f.label :time, class: 'col-sm-2 control-label' %><br>
+    <div class="col-sm-10">
+      <%= f.text_area :time, class: 'form-control' %>
+    </div>
+  </div> 
+  -->
+    <div class="field form-group">
+    <%= f.label :time, class: 'col-sm-2 control-label' %><br>
+    <div class="col-sm-10">
+      <%= f.radio_button :time, 7 %>
+      <%= f.label :time, "7:00 AM", :value => "0700" %>
+      <%= f.radio_button :time, 10 %>
+      <%= f.label :time, "10:00 AM", :value => "1000" %>
+      <%= f.radio_button :time, 13 %>
+      <%= f.label :time, "1:00 PM", :value => "1:00 PM" %>
+      <%= f.radio_button :time, 17 %>
+      <%= f.label :time, "4:00 PM", :value => "1700" %>
+
+  <div class="actions form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit %>
+    </div>
+  </div>
+<% end %>

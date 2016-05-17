@@ -45,40 +45,38 @@
 </tr>
 
 <tr class = "cal_table3">
-<td class = 'cal_previous'><form method='link' action="/appointments/new"><button class='btn'>back</button></form></td>
+<td class = 'cal_previous'><form method='link' action="/appoints/new"><button class='btn'>back</button></form></td>
 </tr>
 </table>
 </div>
 
 <div id='cal_previous2'><button class='btn' onclick='prevPage();'>back</button></div><br />
 
-            <div id="appointment_form">
-              <%= form_tag("/appointments", :method => "post") do %>
+            <div id="appoint_form">
+              <%%= form_tag("/appoints", :method => "post") do %>
                             
                             <br />
-                            <label for="appointments_date">scheduled date</label><br /><br />
+                            <label for="appoints_date">scheduled date</label><br /><br />
                             <div id = "final_date"><h2></h2></div>
-                            <input id="schedules_date" name="appointments[date]" type="hidden" />
+                            <input id="schedules_date" name="appoints[date]" type="hidden" />
                             <br />
                             <br />
                             
-                            <label for="appointments_hour">scheduled hour</label><br /><br />
+                            <label for="appoints_hour">scheduled hour</label><br /><br />
                             <div id = "final_hour"><h2></h2></div>
-                            <input id="appointments_hour" name="appointments[hour]" type="hidden" />
+                            <input id="appoints_hour" name="appoints[hour]" type="hidden" />
                             <br />
                             <br />
 
                             <input type="submit" name="btn" value="Submit" class = 'btn' id="subData" style="display:none;">
                             
-                             <%= submit_tag("Submit") %>
-               <% end %>
+                             <%%= submit_tag("Submit") %>
+               <%% end %>
 
 </div>
       
 <div id = "hidden_hour_div"></div>  
 
-	<script src="/jquery.ui.widget.min.js"></script>
-	<script src="/jquery.ui.datepicker.min.js"></script>
-	<script src="/appointment.js"></script>
-
-
+  <script src="/jquery.ui.widget.min.js"></script>
+  <script src="/jquery.ui.datepicker.min.js"></script>
+  <script src="/appoint.js"></script>

@@ -1,6 +1,6 @@
 #appointment.rb
  
-class Appointment < ActiveRecord::Base
+class Appoint < ActiveRecord::Base
 attr_accessible :date, :hour
  
 validates :date,  :presence => true

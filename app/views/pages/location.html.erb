@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+.flex-container {
+  padding-top: 60px;
+  padding-left: 180px;
+  padding-right: 180px;
+    display: -webkit-flex;
+    display: flex;
+    width: 1330px;
+    height: 768px;
+    background-color: #1C1C1C;
+}
+
+.flex-item {
+  padding-left: 10px;
+  padding-right: 10px;
+    background-color: black;
+    width: 250px;
+    height: 200px;
+    margin: 40px;
+}
+
+.flex-item:hover{
+   box-shadow:
+                2px 2px #53a7ea,
+                3px 3px #53a7ea,
+                4px 4px #53a7ea;
+}
+
+h3{
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #666666;
+}
+
+p{
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #666666;
+}
+
+a{
+  text-decoration: none;
+}
+
+</head>
+</style>
+
+
+<body bgcolor = "#1C1C1C">
+    <font face="ar decode" color="#4B4B4B" size="7"><h1 align="center">Locations</h1></font>
+
+    <div class="flex-container">
+
+      <div class="flex-item"> 
+        <h3>Classic Auto #1</h3>
+        <p>1 Washington Sq<br />San Jose, CA 95192</p>
+        <p><strong>(408) 778-2345</strong></p>
+        <a href="http://localhost:3000/apts" class="btn" style="margin-right:5px;">Make an Appointment</a>
+      </div>
+      
+      <div class="flex-item">
+        <h3>Classic Auto #2</h3>
+        <p>5120 Stevens Creek<br />Cupertino, CA 95014</p>
+        <p><strong>(408) 764-4070</strong></p>
+        <a href="http://localhost:3000/apts" class="btn" style="margin-right:5px;">Make an Appointment</a>
+      </div>
+      
+      <div class="flex-item">
+        <h3>Classic Auto #3</h3>
+        <p>12345 El Monte Rd.<br />Los Altos Hills, CA 94022</p>
+        <p><strong>(408) 589-5297</strong></p>
+        <a href="http://localhost:3000/apts" class="btn" style="margin-right:5px;">Make an Appointment</a>
+      </div>
+    </div>
+</body>
+</html>
+

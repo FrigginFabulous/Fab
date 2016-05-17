@@ -1,0 +1,11 @@
+class CreateAppointments < ActiveRecord::Migration
+  def change
+    drop_table :appointments
+    create_table :appointments do |t|
+      t.string :date
+      t.string :hour
+
+      t.timestamps null: false
+    end
+  end
+end

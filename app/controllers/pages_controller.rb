@@ -1,4 +1,16 @@
-  class PagesController < ApplicationController
-    def show
-    end
-  end 
+class PagesController < ApplicationController
+  def home
+  end
+
+  def appointment
+  end
+
+  def about
+  end
+
+  def location
+  end
+
+  def services
+  end
+end
